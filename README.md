@@ -10,7 +10,9 @@ Scriptul oferă o structură detaliată a unui telefon mobil, incluzând specifi
 
 1. Clonează repository-ul:git clone https://github.com/Dark-4LIFE/telefon_mobil.git
 
-2. Navighează în directorul proiectului și rulează scriptul:cd telefon_mobil python telefon_mobil.py## Contribuții
+2. Navighează în directorul proiectului și rulează scriptul:cd telefon_mobil python telefon_mobil.py
+
+## Contribuții
 
 Contribuțiile sunt binevenite! Te rog să deschizi un issue sau să trimiți un pull request pentru orice sugestie de îmbunătățire.
 
