@@ -43,46 +43,21 @@ telefon_mobil = {
 
 
 
-print(f"Telefon mobil: {telefon_mobil.get('nume', 'N/A')}")
-print(f"Pret: {telefon_mobil.get('pret', 'N/A')}")
-print("---\n")
+# Funcție pentru a afișa informațiile generale ale telefonului
+def afiseaza_informatii_generale(telefon):
+    print(f"Telefon mobil: {telefon.get('nume', 'Necunoscut')}")
+    print(f"Preț: {telefon.get('pret', 'Necunoscut')}")
+    print("---\n")
 
+# Funcție pentru a afișa specificațiile telefonului
+def afiseaza_specificatii(specificatii):
+    for cheie, valoare in specificatii.items():
+        if isinstance(valoare, list):
+            print(f"{cheie.capitalize()}: {', '.join(valoare)}")
+        else:
+            print(f"{cheie.capitalize()}: {valoare}")
+    print("---\n")
 
-
-
-
-
-print(f"Tip telefon: {telefon_mobil['specificatii'].get('tip telefon', 'N/A')}\n"
-      f"Sloturi SIM: {telefon_mobil['specificatii'].get('sloturi sim', 'N/A')}\n"
-      f"Tip SIM: {telefon_mobil['specificatii'].get('tip sim', 'N/A')}\n"
-      f"Sistem de operare: {telefon_mobil['specificatii'].get('sistem de operare', 'N/A')}\n"
-      f"Conectivitate: {','.join(telefon_mobil['specificatii'].get('conectivitate', []))}\n"
-      f"Versiune bluetooth: {telefon_mobil['specificatii'].get('versiune bluetooth', 'N/A')}\n"
-      f"Numar nuclee: {telefon_mobil['specificatii'].get('numar nuclee', 'N/A')}\n"
-      f"Frecventa procesor: {','.join(telefon_mobil['specificatii'].get('frecventa procesor', []))}\n"
-      f"Senzori: {','.join(telefon_mobil['specificatii'].get('senzori', []))}\n"
-      f"Continut pachet: {','.join(telefon_mobil['specificatii'].get('continut pachet', []))}\n"
-      f"Culoare: {telefon_mobil['specificatii'].get('culoare', 'N/A')}\n"
-      f"Dimensiuni: {telefon_mobil['specificatii'].get('dimensiuni', 'N/A')}\n"
-      f"Greutate: {telefon_mobil['specificatii'].get('greutate', 'N/A')}\n"
-      f"SAR: {telefon_mobil['specificatii'].get('SAR', 'N/A')}\n"
-      f"An aparitie: {telefon_mobil['specificatii'].get('an aparitie', 'N/A')}\n"
-      f"Altele: {','.join(telefon_mobil['specificatii'].get('altele', []))}\n"
-      f"Tehnologie: {','.join(telefon_mobil['specificatii'].get('tehnologie', []))}\n"
-      f"Ro Alert: {telefon_mobil['specificatii'].get('ro alert', 'N/A')}\n"
-      f"Dimensiune ecran: {telefon_mobil['specificatii'].get('dimensiune ecran', 'N/A')}\n"
-      f"Tip display: {telefon_mobil['specificatii'].get('tip display', 'N/A')}\n"
-      f"Rezolutie: {telefon_mobil['specificatii'].get('rezolutie', 'N/A')}\n"
-      f"Functii display: {','.join(telefon_mobil['specificatii'].get('functii display', []))}\n"
-      f"Memorie interna: {telefon_mobil['specificatii'].get('memorie interna', 'N/A')}\n"
-      f"Memorie RAM: {telefon_mobil['specificatii'].get('memorie RAM', 'N/A')}\n"
-      f"Slot card memorie: {telefon_mobil['specificatii'].get('slot card memorie', 'N/A')}\n"
-      f"Standard Wi-fi: {telefon_mobil['specificatii'].get('standard wi-fi', 'N/A')}\n"
-      f"Porturi: {telefon_mobil['specificatii'].get('porturi', 'N/A')}\n"
-      f"Numar camere: {telefon_mobil['specificatii'].get('numar camere', 'N/A')}\n"
-      f"Rezolutie camera principala: {','.join(telefon_mobil['specificatii'].get('rezolutie camera principala', []))}\n"
-      f"Rezolutie camera frontala: {telefon_mobil['specificatii'].get('rezolutie camera frontala', 'N/A')}\n"
-      f"Rezolutie video: {telefon_mobil['specificatii'].get('rezolutie video', 'N/A')}\n"
-      f"Caracteristici foto video: {','.join(telefon_mobil['specificatii'].get('caracteristici foto video', []))}\n"
-      f"Blit: {telefon_mobil['specificatii'].get('blit', 'N/A')}\n"
-      f"Capacitate baterie: {telefon_mobil['specificatii'].get('capacitate baterie', 'N/A')}\n")
+# Apelarea funcțiilor pentru a afișa informațiile
+afiseaza_informatii_generale(telefon_mobil)
+afiseaza_specificatii(telefon_mobil["specificatii"])
